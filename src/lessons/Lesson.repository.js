@@ -126,7 +126,7 @@ export class LessonsRepository {
 		let where = '';
 		let having = '';
 		let limit = 5;
-		let offset = 1 * limit;
+		let offset = (1 - 1) * limit;
 
 		if(Object.keys(params).length > 0)
 		{
