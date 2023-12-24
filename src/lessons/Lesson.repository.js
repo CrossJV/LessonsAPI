@@ -126,7 +126,7 @@ export class LessonsRepository {
 		let where = '';
 		let having = '';
 		let limit = 5;
-		let offset = 0;
+		let offset = 1 * limit;
 
 		if(Object.keys(params).length > 0)
 		{
@@ -237,9 +237,9 @@ export class LessonsRepository {
 						}
 						break;
 					case 'page':
-						if(item >= 0)
+						if(item > 0)
 						{
-							offset = item
+							offset = (item - 1) * limit
 						} else 
 						{
 							return {"success": false, "error": 'INVALID PAGE NUMBER'}
